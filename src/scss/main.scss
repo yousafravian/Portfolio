@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sansita+Swashed:wght@300&display=swap');
+@import 'variables';
+
+// Customized Bootstrap
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: $background;
+    height: 100vh;
+    main{
+        height: 100%;
+        section.first-section {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 5fr 1fr;
+
+            @import "nav";
+            @import "intro-section";
+            div.move-down {
+                i {
+                    color: #ffe3d8;
+                    cursor: pointer;
+                    font-size: 48px;
+                    animation: arrow-down-animation .7s infinite alternate-reverse ease-out;
+                }
+                span.small {
+                    color: lightgrey;
+                    bottom: 10px;
+                    right: 20px;
+                }
+            }
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        canvas {
+            display: block;
+        }
+
+    }
+}
+
+@keyframes arrow-down-animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+        transform: translateY(50%);
+    }
+}
+

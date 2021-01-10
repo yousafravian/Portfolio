@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/af280500eb.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<main>
+    <section class="first-section">
+        <navbar style="z-index: 100">
+            <header class="shadow-sm">
+                <nav>
+                    <div class="nav_brand pt-1"><span class="align-bottom">Portfolio</span></div>
+                    <ul class="nav_list m-0">
+                        <li>About Me</li>
+                        <li><span type="button" data-toggle="modal" data-target="#exampleModal">Contact Me</span></li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </nav>
+            </header>
+        </navbar>
+        <introduction-section class="row m-0 pt-5 bg-transparent">
+            <name class="col-md-6 mt-5 pt-5 col-sm-12 d-flex align-items-center justify-content-center row flex-column order-last order-md-first border-right border-grey">
+                <div id="name" class="pl-5 display-text font-big font-weight-bold">Yousaf Raza</div>
+                <div id="position" class="pr-5 mt-5 display-text text-right font-weight-light">.Front-End Engineer</div>
+                <div class="cir-btn pt-5 mt-5">
+                    <i class="fab fa-facebook mr-4"></i>
+                    <i class="fab fa-whatsapp mr-4"></i>
+                    <i class="fas fa-at"></i>
+                </div>
+            </name>
+            <pic class="col-md-6 col-sm-12 d-flex align-items-center pl-5">
+                <div class="profile-pic rounded-circle"></div>
+            </pic>
+        </introduction-section>
+        <div class="move-down text-center position-relative">
+            <i class="fas fa-chevron-down mt-3 mr-4"></i>
+            <span class="small position-absolute">yousaf@viablelogic.com</span>
+        </div>
+    </section>
+    <div id="particles-js"></div>
+
+</main>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/af280500eb.js" crossorigin="anonymous"></script>
+<script src="../node_modules/particles.js/particles.js"></script>
+<script src="../dist/main.js"></script>
+
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Hello My name is <b>Yousaf Raza</b> and I am a <b>BSCS</b> student at GCU University Lahore.
+                <br><br>I am currently practicing front-end development and Angular is my area of specialty.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

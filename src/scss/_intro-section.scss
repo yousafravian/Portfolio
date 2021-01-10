@@ -1,0 +1,63 @@
+introduction-section {
+  pic {
+    .profile-pic {
+      width: 400px;
+      height: 400px;
+      background: url("../images/DSC_0279@0.5x.jpg") no-repeat;
+      background-size: cover;
+      background-position-y: 30%;
+      border: 1px solid white;
+    }
+  }
+
+  name {
+    div.display-text {
+      color: #ffe3d8;
+      width: 100%;
+      font-size: 28px;
+      font-family: 'OpenSans', monospace;
+      text-transform: capitalize;
+
+      &.font-big {
+        font-size: 48px;
+      }
+    }
+
+    div.cir-btn {
+      i {
+        font-size: 52px;
+        margin: 0 5px;
+        cursor: pointer;
+        color: #ffe3d8;
+
+        transition: .2s color ease-in-out;
+
+
+        &.fa-facebook {
+          color: lighten(#1616fd, 20);
+          &:hover {
+            color: #1616fd;
+          }
+        }
+
+
+        &.fa-whatsapp {
+          color: lighten(green, 40);
+
+          &:hover {
+            color: green;
+          }
+        }
+
+        &.fa-at {
+          color: lighten(darkred, 50);
+          &:hover {
+            color: darkred;
+          }
+        }
+      }
+
+    }
+  }
+
+}
