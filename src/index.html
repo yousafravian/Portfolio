@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="../node_modules/aos/dist/aos.css" type="text/scss">
     <script src="https://kit.fontawesome.com/af280500eb.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="bg-light">
 
 <main>
     <section class="first-section">
@@ -17,8 +18,8 @@
                 <nav>
                     <div class="nav_brand pt-1"><span class="align-bottom">Portfolio</span></div>
                     <ul class="nav_list m-0">
-                        <li>About Me</li>
-                        <li><span type="button" data-toggle="modal" data-target="#exampleModal">Contact Me</span></li>
+                        <li><span type="button" data-toggle="modal" data-target="#exampleModal">About Me</span></li>
+                        <li><span type="button" data-toggle="modal" data-target="#contactModal">Contact Me</span></li>
                         <li>LinkedIn</li>
                     </ul>
                 </nav>
@@ -42,8 +43,64 @@
             <i class="fas fa-chevron-down mt-3 mr-4"></i>
             <span class="small position-absolute">yousaf@viablelogic.com</span>
         </div>
+        <div id="particles-js"></div>
     </section>
-    <div id="particles-js"></div>
+    <section class="second-section skills pb-5 container bg-light">
+        <br>
+        <h1 class="h1 text-center heading font-weight-bolder">Skills</h1>
+        <hr><br>
+        <div class="skills-container row">
+            <div class="col-md-4 col-sm-8 offset-sm-2 offset-md-0 pt-1" data-aos-duration="1000" data-aos="fade-up">
+                <div class="skill-angular shadow border-0 card bg-dark text-light">
+                    <div class="card-header text-center h2 font-weight-bold">Angular</div>
+                    <img src="./images/angular-logo.png" class="card-img card-img-top"/>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-8 offset-sm-2 offset-md-0 pt-1">
+                <div class="skill-java shadow border-0 card bg-dark text-light">
+                    <div class="card-header text-center h2 font-weight-bold">Java</div>
+                    <img src="./images/java.svg" class="card-img card-img-top"/>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-8 offset-sm-2 offset-md-0 pt-1">
+                <div class="skill-android shadow border-0 card bg-dark text-light">
+                    <div class="card-header text-center h2 font-weight-bold">Android</div>
+                    <img src="./images/android-512.png" class="card-img bg-white p-3 card-img-top"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="languages-section pb-5">
+        <div class="container">
+            <h1 class="text-center font-weight-bold">Programming languages</h1>
+            <hr>
+            <br>
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <img class="rounded-circle border lang-img" src="./images/ts-logo.png" alt="angular logo">
+                <div class="progress ml-5 w-100">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <img class="rounded-circle border lang-img" src="./images/html-logo.png" alt="angular logo">
+                <div class="progress ml-5 w-100">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <img class="rounded-circle border lang-img" src="./images/css-logo.png" alt="angular logo">
+                <div class="progress ml-5 w-100">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <img class="rounded-circle border lang-img" src="./images/java-logo.png" alt="angular logo">
+                <div class="progress ml-5 w-100">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 
@@ -56,6 +113,7 @@
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/af280500eb.js" crossorigin="anonymous"></script>
 <script src="../node_modules/particles.js/particles.js"></script>
+<script src="../node_modules/aos/dist/aos.js"></script>
 <script src="../dist/main.js"></script>
 
 </html>
@@ -66,6 +124,28 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Hello My name is <b>Yousaf Raza</b> and I am a <b>BSCS</b> student at GCU University Lahore.
+                <br><br>I am currently practicing front-end development and Angular is my area of specialty.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Modal title</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
