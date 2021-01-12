@@ -1,6 +1,7 @@
 @import "variables";
 
 navbar {
+  z-index: 2;
   header {
     background: $light-nav-background;
     padding: 5px 10px;

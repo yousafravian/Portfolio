@@ -1,24 +1,27 @@
+// Google fonts import
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sansita+Swashed:wght@300&display=swap');
+// Variables
 @import 'variables';
-
 // Customized Bootstrap
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// signup page
+@import "./signup";
 
 
+// Global Styles
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-body {
+body.main-page {
     background: white;
     height: 100vh;
     main{
         height: 100%;
         section.first-section {
-            background: $background;
             height: 100%;
             display: grid;
             grid-template-columns: 1fr;
@@ -27,6 +30,7 @@ body {
             @import "nav";
             @import "intro-section";
             div.move-down {
+                z-index: 2;
                 i {
                     color: #ffe3d8;
                     cursor: pointer;
@@ -43,13 +47,111 @@ body {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                opacity: .5;
+                opacity: 1;
                 top: 0;
                 left: 0;
                 z-index: 1;
             }
+            ._bg {
+                background: url('https://wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-17.jpg');
+                filter: blur(2px);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
         }
 
+        #skill-caraousel {
+            position: relative;
+            .heading {
+                position: absolute;
+                top: 10px;
+                z-index: 1;
+                letter-spacing: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .carousel-item {
+                width: 100%;
+                height: 500px;
+                img {
+                    margin-top: -90px;
+                    background-size: contain;
+                }
+            }
+        }
+
+        .github-section {
+            width: 100%;
+            height: 200px;
+            .git-img {
+                width: 100%;
+                height: 200px;
+                display: grid;
+                place-items: center;
+                background: #25292f;
+                i {
+                    color: white;
+                    font-size: 100px;
+                    transition: .1s ease-in-out;
+                    animation: 1s scale-animation ease-in-out infinite alternate;
+                    &:hover {
+                        animation: none;
+                        font-size: 120px;
+                    }
+                }
+            }
+            a {
+                cursor: pointer;
+            }
+        }
+
+        .languages-section {
+            width: 100%;
+            height: 300px;
+            background: whitesmoke;
+            position: relative;
+            .heading {
+                position: absolute;
+                top: 10px;
+                z-index: 1;
+                letter-spacing: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            i {
+                font-size: 100px;
+                transition: .1s ease-in-out;
+                color: white;
+
+                &.fa-java {
+                    color: rgb(199, 101, 71);
+                }
+
+                &.fa-js-square {
+                    color: yellow;
+                }
+
+                &.fa-html5 {
+                    color: orange;
+                }
+                &.fa-css3 {
+                    color: blue;
+                }
+
+                &:hover {
+                    font-size: 110px;
+                    color: white;
+                }
+            }
+        }
+        
         section.second-section.skills {
             .heading {
                 letter-spacing: 2px;
@@ -64,12 +166,12 @@ body {
             }
         }
 
-        section.languages-section {
-            .lang-img {
-                width: 100px;
-                height: 100px;
-            }
-        }
+        // section.languages-section {
+        //     .lang-img {
+        //         width: 100px;
+        //         height: 100px;
+        //     }
+        // }
         canvas {
             display: block;
         }
@@ -77,6 +179,8 @@ body {
     }
 }
 
+
+// Animation
 @keyframes arrow-down-animation {
     0% {
         opacity: 1;
@@ -84,6 +188,16 @@ body {
     100% {
         opacity: .3;
         transform: translateY(50%);
+    }
+}
+// Animation
+@keyframes scale-animation {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+
     }
 }
 
